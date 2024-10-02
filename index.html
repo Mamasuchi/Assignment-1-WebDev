@@ -4,77 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h1, h2, h3 {
+            font-family: 'Arial', sans-serif;
+            color: #2c3e50;
+        }
+
+        /* Eddie */
+        .red {
+            color: red;
+        }
+        /* Van */
+        .white {
+            color: white;
+        }
+        /* Halen */
+        .black {
+            color: black;
+        }
+
+        /* CSS Positioning */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        img {
+            float: right;
+            margin: 0 0 10px 20px;
+        }
+
+        /* CSS Display and Flexbox */
+        header {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Grid Layout */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+        .summary-container {
+            background-color: #ffebcd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .education-container {
+            background-color: #e6e6fa; 
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .work-container {
+            background-color: #f0e68c; 
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .skills-container {
+            background-color: #f5deb3; 
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .awards-container {
+            background-color: #d3d3d3;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            background-color: #34495e;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header, footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            img {
+                float: none;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        
+        ul {
+            list-style-type: square;
+        }
+
+    
+        a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+
+        
+        .awards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Eddie Van Halen</h1>
+    <header>
+        <h1>
+            <span class="red">Eddie</span> 
+            <span class="white">Van</span> 
+            <span class="black">Halen</span>
+        </h1>
+        <img src="assets/images/evh.webp" height="125" width="110" alt="Eddie Van Halen">
+    </header>
 
-    <p>
-        <img src="assets/images/evh.webp" height="125" width="110">
-        <br/> <!-- this is end line. example of void tag-->
-        <br/>
-        <h2>Summary</h2>
-        Pioneer Guitarist of the 80s  
-    </p>
-    <hr/>
-    <h2>Education</h2>
-    <ul>
-        <li>Pasadena City College (1969)</li>
-        <li>Long Beach City College (1964-1967)</li>
-    </ul>
-    <hr/>
-    <h3>Work Experience</h3>
-    <p>
-        <ul>
-            <li> Created Band Group Van Halen</li>
-            <br/>
-            Started 1972 - October 2020
+    <div class="main-content">
+        <div class="summary-container">
+            <h2>Summary</h2>
+            <p>Pioneer Guitarist of the 80s</p>
+        </div>
+        <div class="education-container">
+            <h2>Education</h2>
+            <ul>
+                <li>Pasadena City College (1969)</li>
+                <li>Long Beach City College (1964-1967)</li>
+            </ul>
+        </div>
+        <div class="work-container">
+            <h3>Work Experience</h3>
+            <ul>
+                <li>Created Band Group Van Halen (1972 - October 2020)</li>
+                <ul>
+                    <li>Performance Live in New Haven (1986)</li>
+                    <li>“Cathedral” Live on the Les Paul Television Special, 1988</li>
+                    <li>“Hot for Teacher” Jimmy Kimmel Live on Hollywood Boulevard, 2015</li>
+                    <li>“Jump” Live on the Balance Tour, 1995</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="skills-container">
+            <h3>Skills</h3>
+            <ul>
+                <li>Classical Guitar (Spanish, Flamenco)</li>
+                <li>Electric Guitar (Finger Tapping, Tremolo Picking)</li>
+                <li>Piano</li>
+                <li>Learned Music by Ear</li>
+                <li>Unique Tone and Crafting on Guitar</li>
+            </ul>
+        </div>
+        <div class="awards-container">
+            <h3>Awards and Certifications</h3>
+            <div class="awards">
+                <div>Best Rock Performance by a Duo or Group with Vocal (Jump - 1985)</div>
+                <div>Best Rock Instrumental Performance (Donut City - 1985)</div>
+                <div>Best Hard Rock Performance (For Unlawful Carnal Knowledge - 1992)</div>
+                <div>Best Hard Rock Performance (The Seventh Seal - 1996)</div>
+            </div>
+        </div>
 
-            <ul><br/>
-                <li> Performance Live in New Haven (1986) </li>
-            <li>“Cathedral” Live on the Les Paul Television Special, 1988</li>
-        <li>“Hot for Teacher” Jimmy Kimmel Live on Hollywood Boulevard, 2015</li>
-    <li>“Jump” Live on the Balance Tour, 1995</li></ul>
-            
-        </ul>
-    </p>
-    <hr/>
-    <h3>Skills</h3>
-    <p>
-        <ul>
-            <li>
-                Clasiccal Guitar (spanish) (Flamenco)
-            </li>
-            <li>Electric Guitar (Finger Tapping) (Tremolo picking)</li>
-            <li>Piano</li>
-            <li>Learned music by Ear</li>
-            <li> Unique tone and Crafting on Guitar</li>
-        </ul>
-    </p>
-    <hr>
-    <h3>Awards and Certifications</h3>
-    <p>
-        <ul>
-            <li>
-                Best Rock Performance by a Duo or Group with Vocal(Jump-1985)
-            </li>
-            <li>Best Rock Instrumental Performance ("Donut City" (Edward Van Halen)-1985)</li>
-            <li>Best Hard Rock Performance(For Unlawful Carnal Knowledge)-1992</li>
-            <li>Best Hard Rock Performance ("The Seventh Seal")-1996</li>
-        </ul>
-    </p>
-    <hr>
-    <h3>Other</h3>
-    <p>
-        <ul>
-            <li><a href= "aboutme.html">
-                Contact Me
-            </a></li>
-            <li><a href="hobbies.html"> Hobbies</a></li>
-        </ul>
-    </p>
-    <hr>
-    <p>Copyright @ 2024 Jose Vasquez Archives All Rights Reserved to EVH.</p>
+    </div>
 
-
+    <footer>
+        <p><a href="aboutme.html">Contact Me</a></p>
+        <p><a href="hobbies.html">Hobbies</a></p>
+        <p>Copyright @ 2024 Jose Vasquez Archives All Rights Reserved to EVH.</p>
+    </footer>
 </body>
 </html>
