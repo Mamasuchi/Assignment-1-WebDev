@@ -4,21 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hobbies</title>
+    <style>
+
+        h1, p, ul {
+            font-family: 'Arial', sans-serif;
+            color: #2c3e50;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Verdana', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .hobbies-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+        }
+
+        img {
+            float: right;
+            margin: 0 0 10px 20px;
+            border-radius: 8px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hobbies-list {
+                grid-template-columns: 1fr;
+            }
+
+            img {
+                float: none;
+                display: block;
+                margin: 10px auto;
+            }
+        }
+
+        /* Link styling */
+        a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Hobbies</h1>
-    <p>Eddie Van Halen had many interests outside of music. Some of his hobbies included:</p>
-    <ul>
-        <li>Building his own custom guitars which lead to his own guitar collection</li>
-        <li>Motorcycle racing</li>
-        <li>Playing the Piano</li>
-        <li>Painting and visual arts</li>
-        <li>Creating music in the studio and outdoor activities</li>
-    </ul>
-    <hr>
-    <img src="assets/images/frank.webp" height="200" width="250">
-    <br/>
-    <hr>
-    <a href="index.html">Back to Home</a>
+    <div class="container">
+        <h1>Hobbies</h1>
+        <p>Eddie Van Halen had many interests outside of music. Some of his hobbies included:</p>
+        <div class="hobbies-list">
+            <ul>
+                <li>Building his own custom guitars which led to his own guitar collection</li>
+                <li>Motorcycle racing</li>
+            </ul>
+            <ul>
+                <li>Playing the Piano</li>
+                <li>Painting and visual arts</li>
+                <li>Creating music in the studio and outdoor activities</li>
+            </ul>
+        </div>
+        <hr>
+        <img src="assets/images/frank.webp" height="400" width="550" alt="Eddie Van Halen's Guitar">
+        <br/>
+        <hr>
+        <a href="index.html">Back to Home</a>
+    </div>
 </body>
 </html>
