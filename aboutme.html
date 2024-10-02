@@ -4,23 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me - Eddie Van Halen</title>
+    <style>
+        h1, h2, p, ul {
+            font-family: 'Arial', sans-serif;
+            color: #2c3e50;
+        }
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Verdana', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            float: left;
+            padding: 0;
+        }
+        @media (max-width: 768px) {
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+        a {
+            color: #e74c3c;
+            text-decoration: none;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #ccc;
+            margin: 20px 0;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Contact Me</h1>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <p>If you'd like to get in touch, here are my contact details:</p>
 
-    <p>If you'd like to get in touch, here are my contact details:</p>
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <ul>
+                <li>Email: <a href="mailto:evh@example.com">evh@example.com</a></li>
+                <li>Phone: (555) 122-2267</li>
+                <li>Address: 5150 Van Halen Street, Pasadena, CA 91106</li>
+            </ul>
+        </div>
 
-    <br/> <!-- Using void tag for spacing -->
-    
-    <h2>Contact Information</h2>
-    <ul>
-        <li>Email: <a href="mailto:evh@example.com">evh@example.com</a></li>
-        <li>Phone: (555) 122-2267</li>
-        <li>Address: 5150 Van Halen Street, Pasadena, CA 91106</li>
-    </ul>
-    
-    <hr/>
-    <p><a href="index.html">Back to Home</a></p>
-    <hr/>
+        <hr/>
+        <p><a href="index.html">Back to Home</a></p>
+        <hr/>
+    </div>
 </body>
 </html>
